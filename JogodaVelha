@@ -51,3 +51,14 @@ elif matriz [2][0]:
 elif matriz [2][2]:
     matriz[2][2] = 2
 print("A máquina jogou:", matriz)
+
+#Condicionais para a máquina ganhar:
+
+linha0 = matriz[0][0] == 2 and matriz[0][1] == 2 and matriz[0][2] == 2
+linha1 = matriz[1][0] == 2 and matriz[1][1] == 2 and matriz[1][2] == 2
+linha2 = matriz[2][0] == 2 and matriz[2][1] == 2 and matriz[2][2] == 2
+coluna0 = matriz[0][0] == 2 and matriz[1][0] == 2 and matriz[2][0] == 2
+coluna1 = matriz[0][1] == 2 and matriz[1][1] == 2 and matriz[2][1] == 2
+coluna2 = matriz[0][2] == 2 and matriz[1][2] == 2 and matriz[2][2] == 2
+diagonalprincipal = matriz[0][0] == 2 and matriz[1][1] == 2 and matriz[2][2] == 2
+diagonalsecundaria = matriz[1][2] == 2 and matriz[1][1] == 2 and matriz[2][0] == 2
