@@ -54,10 +54,10 @@ elif matriz [2][2] == 0:
 print("A máquina jogou:", matriz)
 
 # Usuário e Máquina jogando:
-    
-    
+ 
 for i in range (0,3,1):
     for j in range(0,3,1):
+      while matriz [i][j] == 0:
         joglinha = int(input("Escolha uma linha(0,1 ou 2)"))  
         if joglinha == 0: 
           jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)")) 
