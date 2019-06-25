@@ -43,13 +43,13 @@ print("Sua jogada foi:", matriz)
 
 if matriz[0][0] == 0:
     matriz[0][0] = 2
-elif matriz [0][2]:
+elif matriz [0][2] == 0:
     matriz[0][2] = 2
 elif matriz[1][1] == 0:
     matriz[1][1] = 2
-elif matriz [2][0]:
+elif matriz [2][0] == 0:
     matriz[2][0] = 2
-elif matriz [2][2]:
+elif matriz [2][2] == 0:
     matriz[2][2] = 2
 print("A máquina jogou:", matriz)
 
@@ -81,8 +81,8 @@ for i in range (0,3,1):
             if jogcoluna == 0: 
              if matriz[1][1] == 0 :
               matriz[1][0] = 1
-            else:
-             print("Posição já ocupada! Jogue novamente:")
+             else:
+              print("Posição já ocupada! Jogue novamente:")
             if jogcoluna == 1:
               if matriz [1][1] == 0:
                   matriz[1][1] = 1
@@ -98,8 +98,8 @@ for i in range (0,3,1):
             if jogcoluna == 0: 
              if matriz[2][0] == 0 :
               matriz[2][0] = 1
-            else:
-             print("Posição já ocupada! Jogue novamente:")
+             else:
+              print("Posição já ocupada! Jogue novamente:")
             if jogcoluna == 1:
               if matriz [2][1] == 0:
                   matriz[2][1] = 1
@@ -112,6 +112,20 @@ for i in range (0,3,1):
                print("Posição já ocupada! Jogue novamente:")
         
       print(matriz)
+ # Máquina
+    if matriz[0][0] == 0:
+        matriz[0][0] = 2
+    elif matriz[0][2] == 0:
+        matriz[0][2] = 2
+    elif matriz[1][1] == 0:
+        matriz[1][1] = 2
+    elif matriz[2][0] == 0:
+         matriz[2][0] = 2
+    elif matriz[2][2] == 0:
+        matriz[2][2] = 2
+    print("A máquina jogou:", matriz)
+ 
+ 
                   
 
 #Condicionais para a máquina ganhar:
