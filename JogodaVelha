@@ -53,6 +53,29 @@ elif matriz [2][2]:
     matriz[2][2] = 2
 print("A máquina jogou:", matriz)
 
+# Usuário e Máquina jogando:
+    
+for i in range (0,3,1):
+    for j in range(0,3,1):
+        joglinha = int(input("Escolha uma linha(0,1 ou 2)"))  
+        if joglinha == 0: 
+          jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)")) 
+          if jogcoluna == 0: 
+           if matriz[0][0] == 0 :
+            matriz[0][0] = 1
+           else:
+            print("Posição já ocupada! Jogue novamente:")
+            joglinha = int(input("Escolha uma linha(0,1 ou 2)"))
+            if joglinha == 0: 
+             jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)")) 
+             if jogcoluna == 0: 
+              if matriz[0][0] == 0 :
+                matriz[0][0] = 1
+             elif jogcoluna == 1:
+                  if matriz[0][1] == 0:
+                      matriz[0][1] == 1
+          print(matriz)     
+
 #Condicionais para a máquina ganhar:
 
 linha0 = matriz[0][0] == 2 and matriz[0][1] == 2 and matriz[0][2] == 2
@@ -66,9 +89,5 @@ diagonalsecundaria = matriz[1][2] == 2 and matriz[1][1] == 2 and matriz[2][0] ==
 
 #Condicionais para maáquina empatar: 
 
-#Usuário e Máquina jogando:
 
-while linha0 or linha1 or linha2 or coluna0 or coluna1 or coluna2 or diagonalprincipal or diagonalsecundaria:
-    jlinha = int(input("Escolha uma linha(0,1 ou 2)"))
-    jcoluna = int(input("Escolha uma coluna(0,1 ou 2"))
  
