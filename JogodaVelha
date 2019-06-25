@@ -65,3 +65,10 @@ diagonalprincipal = matriz[0][0] == 2 and matriz[1][1] == 2 and matriz[2][2] == 
 diagonalsecundaria = matriz[1][2] == 2 and matriz[1][1] == 2 and matriz[2][0] == 2
 
 #Condicionais para maáquina empatar: 
+
+#Usuário e Máquina jogando:
+
+while linha0 or linha1 or linha2 or coluna0 or coluna1 or coluna2 or diagonalprincipal or diagonalsecundaria:
+    jlinha = int(input("Escolha uma linha(0,1 ou 2)"))
+    jcoluna = int(input("Escolha uma coluna(0,1 ou 2"))
+ 
