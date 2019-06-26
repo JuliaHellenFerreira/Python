@@ -114,76 +114,75 @@ for i in range (9):
       print("Sua jogada foi:", matriz)
 # Máquina
 # Verificar quando o jogador 1 está quase vencendo!
-for i in range(9):
-    for j in range(9):
+
 #Linha 0
-        if matriz[0][0] == 1 and matriz[0][1] ==1:
-            matriz [0][2] = 2
-        if matriz[0][1] == 1 and matriz [0][2] ==1:
-            matriz[0][0] = 2
-        if matriz[0][2] == 1 and matriz [0][0] == 1:
-            matriz[0][1] = 2
+      if matriz[0][0] == 1 and matriz[0][1] ==1:
+        matriz [0][2] = 2
+      if matriz[0][1] == 1 and matriz [0][2] ==1:
+        matriz[0][0] = 2
+      if matriz[0][2] == 1 and matriz [0][0] == 1:
+        matriz[0][1] = 2
 #Linha 1
-        if matriz[1][0] == 1 and matriz[1][1] ==1:
-            matriz [1][2] = 2
-        if matriz[1][1] == 1 and matriz [1][2] ==1:
-            matriz[1][0] = 2
-        if matriz[1][2] == 1 and matriz [1][0] == 1:
-            matriz[1][1] = 2
+      if matriz[1][0] == 1 and matriz[1][1] ==1:
+         matriz [1][2] = 2
+      if matriz[1][1] == 1 and matriz [1][2] ==1:
+         matriz[1][0] = 2
+      if matriz[1][2] == 1 and matriz [1][0] == 1:
+         matriz[1][1] = 2
 #Linha 2
-        if matriz[2][0] == 1 and matriz[2][1] ==1:
-            matriz [2][2] = 2
-        if matriz[2][1] == 1 and matriz [2][2] ==1:
-            matriz[2][0] = 2
-        if matriz[2][2] == 1 and matriz [2][0] == 1:
-            matriz[2][1] = 2
+      if matriz[2][0] == 1 and matriz[2][1] ==1:
+         matriz [2][2] = 2
+      if matriz[2][1] == 1 and matriz [2][2] ==1:
+         matriz[2][0] = 2
+      if matriz[2][2] == 1 and matriz [2][0] == 1:
+          matriz[2][1] = 2
 #Coluna 0
-        if matriz[0][0] == 1 and matriz[1][0] ==1:
-            matriz [2][0] = 2
-        if matriz[1][0] == 1 and matriz [2][0] ==1:
-            matriz[0][0] = 2
-        if matriz[2][0] == 1 and matriz [0][0] == 1:
-            matriz[1][0] = 2
+      if matriz[0][0] == 1 and matriz[1][0] ==1:
+        matriz [2][0] = 2
+      if matriz[1][0] == 1 and matriz [2][0] ==1:
+        matriz[0][0] = 2
+      if matriz[2][0] == 1 and matriz [0][0] == 1:
+        matriz[1][0] = 2
 #Coluna 1
-        if matriz[0][1] == 1 and matriz[1][1] ==1:
-            matriz [2][1] = 2
-        if matriz[1][1] == 1 and matriz [2][1] ==1:
-            matriz[0][1] = 2
-        if matriz[2][1] == 1 and matriz [0][1] == 1:
-            matriz[1][1] = 2
+      if matriz[0][1] == 1 and matriz[1][1] ==1:
+         matriz [2][1] = 2
+      if matriz[1][1] == 1 and matriz [2][1] ==1:
+         matriz[0][1] = 2
+      if matriz[2][1] == 1 and matriz [0][1] == 1:
+         matriz[1][1] = 2
 #Coluna 2
-        if matriz[0][2] == 1 and matriz[1][2] ==1:
-            matriz [2][2] = 2
-        if matriz[1][2] == 1 and matriz [2][2] ==1:
-            matriz[0][2] = 2
-        if matriz[2][2] == 1 and matriz [0][1] == 1:
-            matriz[1][2] = 2
+      if matriz[0][2] == 1 and matriz[1][2] ==1:
+         matriz [2][2] = 2
+      if matriz[1][2] == 1 and matriz [2][2] ==1:
+         matriz[0][2] = 2
+      if matriz[2][2] == 1 and matriz [0][1] == 1:
+         matriz[1][2] = 2
 #Diagonal Principal
-        if matriz[0][0] == 1 and matriz [1][1] == 1:
-            matriz[2][2] = 2
-        if matriz[1][1] == 1 and matriz[2][2] == 1:
-            matriz[0][0] = 2
-        if matriz[2][2 ==1] and matriz[0][0] == 1:
-            matriz[1][1] = 2
+      if matriz[0][0] == 1 and matriz [1][1] == 1:
+         matriz[2][2] = 2
+      if matriz[1][1] == 1 and matriz[2][2] == 1:
+         matriz[0][0] = 2
+      if matriz[2][2 ==1] and matriz[0][0] == 1:
+         matriz[1][1] = 2
 #Diagonal Secundária
-        if matriz[0][2] == 1 and matriz[1][1] == 1:
-            matriz[2][0] = 2
-        if matriz[1][1] == 1 and matriz[2][0] == 1:
-            matriz[0][2] = 2
-        if matriz[2][0] == 1 and matriz[0][2] ==1:
-            matriz[1][1] =2
+      if matriz[0][2] == 1 and matriz[1][1] == 1:
+         matriz[2][0] = 2
+      if matriz[1][1] == 1 and matriz[2][0] == 1:
+         matriz[0][2] = 2
+      if matriz[2][0] == 1 and matriz[0][2] ==1:
+         matriz[1][1] =2
 # Estrátegia para ganhar:
-        if matriz[0][0] == 0:
-            matriz[0][0] = 2
-        elif matriz[0][2] == 0:
-            matriz[0][2] = 2
-        elif matriz[1][1] == 0:
-            matriz[1][1] = 2
-        elif matriz[2][0] == 0:
-            matriz[2][0] = 2
-        elif matriz[2][2] == 0:
-            matriz[2][2] = 2
-        print("A máquina jogou:", matriz)
+      if matriz[0][0] == 0:
+         matriz[0][0] = 2
+      elif matriz[0][2] == 0:
+         matriz[0][2] = 2
+      elif matriz[1][1] == 0:
+         matriz[1][1] = 2
+      elif matriz[2][0] == 0:
+         matriz[2][0] = 2
+      elif matriz[2][2] == 0:
+         matriz[2][2] = 2
+      print("A máquina jogou:", matriz)
 
 # Fim de Jogo
 # Condicionais para ganhar o jogo:
