@@ -54,78 +54,137 @@ elif matriz [2][2] == 0:
 print("A máquina jogou:", matriz)
 
 # Usuário e Máquina jogando:
- 
-for i in range (0,3,1):
-    for j in range(0,3,1):
-      while matriz [i][j] == 0:
-        joglinha = int(input("Escolha uma linha(0,1 ou 2)"))  
-        if joglinha == 0: 
-          jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)")) 
-          if jogcoluna == 0: 
-           if matriz[0][0] == 0 :
-            matriz[0][0] = 1
-           else:
-            print("Posição já ocupada! Jogue novamente:")
-          if jogcoluna == 1:
-              if matriz [0][1] == 0:
-                  matriz[0][1] = 1
-              else: 
-                 print("Posição já ocupada! Jogue novamente:")
-          if jogcoluna == 2: 
-              if matriz[0][2] == 0:
-                 matriz [0][2] = 1
-              else: 
-               print("Posição já ocupada! Jogue novamente:")
-        elif joglinha == 1: 
-            jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)")) 
-            if jogcoluna == 0: 
-             if matriz[1][1] == 0 :
-              matriz[1][0] = 1
-             else:
-              print("Posição já ocupada! Jogue novamente:")
+
+for i in range (9):
+    for j in range(9):
+#Usuário
+      joglinha = int(input("Escolha uma linha(0,1 ou 2)"))
+      if joglinha == 0:
+            jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)"))
+            if jogcoluna == 0:
+                if matriz[0][0] == 0:
+                    matriz[0][0] = 1
+                else:
+                    print("Posição já ocupada! Jogue novamente:")
             if jogcoluna == 1:
-              if matriz [1][1] == 0:
-                  matriz[1][1] = 1
-              else: 
-                 print("Posição já ocupada! Jogue novamente:")
-            if jogcoluna == 2: 
-              if matriz[1][2] == 0:
-                 matriz [1][2] = 1
-              else: 
-               print("Posição já ocupada!Jogue novamente:")
-        elif joglinha == 2:
-            jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)")) 
-            if jogcoluna == 0: 
-             if matriz[2][0] == 0 :
-              matriz[2][0] = 1
-             else:
-              print("Posição já ocupada! Jogue novamente:")
+                if matriz[0][1] == 0:
+                    matriz[0][1] = 1
+                else:
+                    print("Posição já ocupada! Jogue novamente:")
+            if jogcoluna == 2:
+                if matriz[0][2] == 0:
+                    matriz[0][2] = 1
+                else:
+                    print("Posição já ocupada! Jogue novamente:")
+      elif joglinha == 1:
+            jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)"))
+            if jogcoluna == 0:
+                if matriz[1][0] == 0:
+                    matriz[1][0] = 1
+                else:
+                  print("Posição já ocupada! Jogue novamente:")
             if jogcoluna == 1:
-              if matriz [2][1] == 0:
-                  matriz[2][1] = 1
-              else: 
+                if matriz[1][1] == 0:
+                    matriz[1][1] = 1
+                else:
+                    print("Posição já ocupada! Jogue novamente:")
+            if jogcoluna == 2:
+                if matriz[1][2] == 0:
+                    matriz[1][2] = 1
+                else:
+                    print("Posição já ocupada!Jogue novamente:")
+      elif joglinha == 2:
+            jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)"))
+            if jogcoluna == 0:
+                if matriz[2][0] == 0:
+                    matriz[2][0] = 1
+                else:
                  print("Posição já ocupada! Jogue novamente:")
-            if jogcoluna == 2: 
-              if matriz[2][2] == 0:
-                 matriz [2][2] = 1
-              else: 
-               print("Posição já ocupada! Jogue novamente:")
-        
-      print(matriz)
- # Máquina
- # Verificar quando o jogador 1 está quase vencendo!
-    if matriz[0][0] == 0:
-        matriz[0][0] = 2
-    elif matriz[0][2] == 0:
-        matriz[0][2] = 2
-    elif matriz[1][1] == 0:
-        matriz[1][1] = 2
-    elif matriz[2][0] == 0:
-         matriz[2][0] = 2
-    elif matriz[2][2] == 0:
-        matriz[2][2] = 2
-    print("A máquina jogou:", matriz)
-    
+            if jogcoluna == 1:
+                if matriz[2][1] == 0:
+                    matriz[2][1] = 1
+                else:
+                    print("Posição já ocupada! Jogue novamente:")
+            if jogcoluna == 2:
+                if matriz[2][2] == 0:
+                    matriz[2][2] = 1
+                else:
+                    print("Posição já ocupada! Jogue novamente:")
+
+      print("Sua jogada foi:", matriz)
+# Máquina
+# Verificar quando o jogador 1 está quase vencendo!
+for i in range(9):
+    for j in range(9):
+#Linha 0
+        if matriz[0][0] == 1 and matriz[0][1] ==1:
+            matriz [0][2] = 2
+        if matriz[0][1] == 1 and matriz [0][2] ==1:
+            matriz[0][0] = 2
+        if matriz[0][2] == 1 and matriz [0][0] == 1:
+            matriz[0][1] = 2
+#Linha 1
+        if matriz[1][0] == 1 and matriz[1][1] ==1:
+            matriz [1][2] = 2
+        if matriz[1][1] == 1 and matriz [1][2] ==1:
+            matriz[1][0] = 2
+        if matriz[1][2] == 1 and matriz [1][0] == 1:
+            matriz[1][1] = 2
+#Linha 2
+        if matriz[2][0] == 1 and matriz[2][1] ==1:
+            matriz [2][2] = 2
+        if matriz[2][1] == 1 and matriz [2][2] ==1:
+            matriz[2][0] = 2
+        if matriz[2][2] == 1 and matriz [2][0] == 1:
+            matriz[2][1] = 2
+#Coluna 0
+        if matriz[0][0] == 1 and matriz[1][0] ==1:
+            matriz [2][0] = 2
+        if matriz[1][0] == 1 and matriz [2][0] ==1:
+            matriz[0][0] = 2
+        if matriz[2][0] == 1 and matriz [0][0] == 1:
+            matriz[1][0] = 2
+#Coluna 1
+        if matriz[0][1] == 1 and matriz[1][1] ==1:
+            matriz [2][1] = 2
+        if matriz[1][1] == 1 and matriz [2][1] ==1:
+            matriz[0][1] = 2
+        if matriz[2][1] == 1 and matriz [0][1] == 1:
+            matriz[1][1] = 2
+#Coluna 2
+        if matriz[0][2] == 1 and matriz[1][2] ==1:
+            matriz [2][2] = 2
+        if matriz[1][2] == 1 and matriz [2][2] ==1:
+            matriz[0][2] = 2
+        if matriz[2][2] == 1 and matriz [0][1] == 1:
+            matriz[1][2] = 2
+#Diagonal Principal
+        if matriz[0][0] == 1 and matriz [1][1] == 1:
+            matriz[2][2] = 2
+        if matriz[1][1] == 1 and matriz[2][2] == 1:
+            matriz[0][0] = 2
+        if matriz[2][2 ==1] and matriz[0][0] == 1:
+            matriz[1][1] = 2
+#Diagonal Secundária
+        if matriz[0][2] == 1 and matriz[1][1] == 1:
+            matriz[2][0] = 2
+        if matriz[1][1] == 1 and matriz[2][0] == 1:
+            matriz[0][2] = 2
+        if matriz[2][0] == 1 and matriz[0][2] ==1:
+            matriz[1][1] =2
+# Estrátegia para ganhar:
+        if matriz[0][0] == 0:
+            matriz[0][0] = 2
+        elif matriz[0][2] == 0:
+            matriz[0][2] = 2
+        elif matriz[1][1] == 0:
+            matriz[1][1] = 2
+        elif matriz[2][0] == 0:
+            matriz[2][0] = 2
+        elif matriz[2][2] == 0:
+            matriz[2][2] = 2
+        print("A máquina jogou:", matriz)
+
 # Fim de Jogo
 # Condicionais para ganhar o jogo:
 linha0 = matriz[0][0] == 2 and matriz[0][1] == 2 and matriz[0][2] == 2
