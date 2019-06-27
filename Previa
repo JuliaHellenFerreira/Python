@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jun 27"x"5:34:49 2019
+
+@author: tpc 02
+"""
+
+matriz = [[" "," "," "],
+          [" "," "," "],
+          [" "," "," "]]
+
+
+def joga(linha,coluna,matriz,simbolo):
+    linha = linha - 1
+    coluna = coluna - 1
+    if(matriz[linha][coluna]==" "):
+        matriz[linha][coluna] = simbolo
+    else :
+        raise ValueError
+    return(matriz)
+    
+def mostra(matriz):
+    for linha in matriz:
+        print(linha)
+
+def verifica(matriz):
+    aux = False
+    jogadores = ["x","o"]
+    for jog in jogadores:
+        #Linhas
+        if(matriz[0][0] == jog and matriz[0][1] == jog and matriz[0][2] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        elif(matriz[1][0] == jog and matriz[1][1] == jog and matriz[1][2] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        elif(matriz[2][0] == jog and matriz[2][1] == jog and matriz[2][2] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        ##
+        #colunas
+        elif(matriz[0][0] == jog and matriz[1][0] == jog and matriz[2][0] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        elif(matriz[0][1] == jog and matriz[1][1] == jog and matriz[2][1] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        elif(matriz[0][2] == jog and matriz[1][2] == jog and matriz[2][2] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        #diagonal
+        
+        elif(matriz[0][0] == jog and matriz[1][1] == jog and matriz[2][2] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+        elif(matriz[0][2] == jog and matriz[1][1] == jog and matriz[2][0] == jog):
+            print("Jogador "+jog+" ganhou")
+            return(aux)
+    else:
+        return(True)
+        
+def identifica(matriz):
+    jogador = list()
+    maquina = list()
+    i = 0
+    for linha in matriz:
+        for elemento in linha:
+            if(elemento == "x"):
+                jogador.append(i)
+            elif(elemento == "o"):
+                maquina.append(i)
+            i += 1
+        
+    return([jogador,maquina])
+    
+                
+def maquina(matriz):
+    #coluna 0
+    for elementos in matriz[0]
+
+
+
+jogo = True
+matriz = [[" "," "," "],
+          [" "," "," "],
+          [" "," "," "]]
+while(jogo):
+    user = input("Qual a linha seguida da coluna que quer jogar?").split()
+    matriz = joga(int(user[0]), int(user[1]), matriz, "x")
+    print("Sua jogada foi: ")
+    mostra(matriz)
+    jogo = verifica(matriz)
