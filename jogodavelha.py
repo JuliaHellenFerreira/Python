@@ -277,7 +277,7 @@ while not parar:
                 matriz[0][2] = 2
             elif matriz[2][0] == 1 and matriz[0][2] == 1:
                 matriz[1][1] = 2
-# Estrátegia para ganhar:
+# Finalizando a partida:
             if (not verifica(matriz)):
                 print("Maquina ganhou")
                 print( ("FIM DE JOGO"))
