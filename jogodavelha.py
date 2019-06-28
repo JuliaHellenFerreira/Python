@@ -141,7 +141,7 @@ while not parar:
             if lc00 and lc01 and lc02 and lc02 and lc11 and lc12 and lc20 and lc21 and lc22:
                 print("JOGO EMPATADO")
                 parar = True
-            # Usuário
+# Usuário
             joglinha = int(input("Escolha uma linha(0,1 ou 2)"))
             if joglinha == 0:
                 jogcoluna = int(input("Escolha uma coluna(0,1 ou 2)"))
