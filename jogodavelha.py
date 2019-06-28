@@ -5,7 +5,8 @@ print("JOGO DA VELHA")
 nome = input("Qual o seu nome?")
 print("Seja Bem-Vindo", nome,".", "Vamos começar a jogar! Leia as regras a seguir:")
 print("1. O usuários irá escolher uma linha (0, 1 ou 2 para jogar;")
-print("2. O usuário irá escolher uma coluna (0,1 ou 2) para jogar.")
+print("2. O usuário irá escolher uma coluna (0,1 ou 2) para jogar;")
+print("3. O jogo estará encerrado quando aparecer na tela "ValueError".")
 
 #Início do programa
 # Criando a matriz
